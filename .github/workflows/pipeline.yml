@@ -1,4 +1,4 @@
-name: .NET
+name: ci pipeline
 
 on:
   push:
@@ -8,8 +8,8 @@ on:
   pull_request:
 
 env:
-  MAJORMINORVERSION: 0.1
-  SEMANTICVERSION: ${{ env.MAJORMINORVERSION }}.${{github.run_number}}
+  MAJOR_MINOR_VERSION: 0.1
+  SEMANTIC_VERSION: $MAJOR_MINOR_VERSION.${{github.run_number}}
   
 concurrency: cd-${{ github.ref }}
 
