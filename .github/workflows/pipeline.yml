@@ -1,16 +1,20 @@
-name: .NET
-
 on:
   push:
-    branches: [ "master" ]
+    path-ignore:
+      - '**.md'
+      - 'docs/**'
   pull_request:
-    branches: [ "master" ]
+
+env:
+  SEMANTIC_VERSION: 0.1.${{github.run_number}}
+
+concurrency: ci-${{ github.ref }}
+
+name: ci-pipeline
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v3
     - name: Setup .NET
@@ -20,6 +24,7 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
-      run: dotnet build --no-restore
+      run: dotnet build --no-restore -c Release -p:Version=${{ env.SEMANTIC_VERSION }}
     - name: Test
       run: dotnet test --no-build --verbosity normal
+     
