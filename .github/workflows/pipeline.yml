@@ -7,11 +7,11 @@ on:
 
 env:
   MAJOR_MINOR_VERSION: 0.1
-  SEMANTIC_VERSION: ${{env['MAJOR_MINOR_VERSION']}}.${{github.run_number}}
+  SEMANTIC_VERSION: ${{env.MAJOR_MINOR_VERSION}}.${{github.run_number}}
   
-concurrency: cd-${{ github.ref }}
+concurrency: ci-${{ github.ref }}
 
-name: ci pipeline
+name: ci-pipeline-${{ env.SEMANTIC_VERSION }}
 
 jobs:
   build:
