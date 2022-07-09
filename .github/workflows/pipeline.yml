@@ -27,4 +27,9 @@ jobs:
       run: dotnet build --no-restore -c Release -p:Version=${{ env.SEMANTIC_VERSION }}
     - name: Test
       run: dotnet test --no-build --no-restore -p:Version=${{ env.SEMANTIC_VERSION }} --verbosity normal --collect:"XPlat Code Coverage" --settings Tests/coverlet.runsettings
-     
+    - uses: actions/checkout@master
+    - uses: codecov/codecov-action@v3
+      with:
+        flags: unittest
+        fail_ci_if_error: true
+        verbose: true
