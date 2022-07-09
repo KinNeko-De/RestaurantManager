@@ -17,6 +17,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{651A3C2D
 		Tests\coverlet.runsettings = Tests\coverlet.runsettings
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestaurantManager.XUnitTest", "Tests\RestaurantManager.XUnitTest\RestaurantManager.XUnitTest.csproj", "{7C0E3493-820E-4197-8147-7FF157351C9E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,12 +33,17 @@ Global
 		{A90140C2-96AD-4A93-9D56-DE11F2D511C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A90140C2-96AD-4A93-9D56-DE11F2D511C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A90140C2-96AD-4A93-9D56-DE11F2D511C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C0E3493-820E-4197-8147-7FF157351C9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C0E3493-820E-4197-8147-7FF157351C9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C0E3493-820E-4197-8147-7FF157351C9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C0E3493-820E-4197-8147-7FF157351C9E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{A90140C2-96AD-4A93-9D56-DE11F2D511C9} = {651A3C2D-DAEF-40F9-AD32-952162DC12D0}
+		{7C0E3493-820E-4197-8147-7FF157351C9E} = {651A3C2D-DAEF-40F9-AD32-952162DC12D0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5627264F-1DAA-47BF-BAC7-A235E4C218FE}
