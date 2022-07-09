@@ -10,6 +10,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestaurantManager.UnitTest", "Tests\RestaurantManager.UnitTest\RestaurantManager.UnitTest.csproj", "{A90140C2-96AD-4A93-9D56-DE11F2D511C9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{651A3C2D-DAEF-40F9-AD32-952162DC12D0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,9 +24,16 @@ Global
 		{9969303C-844D-489D-A5AB-E8AFC3DAD5A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9969303C-844D-489D-A5AB-E8AFC3DAD5A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9969303C-844D-489D-A5AB-E8AFC3DAD5A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A90140C2-96AD-4A93-9D56-DE11F2D511C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A90140C2-96AD-4A93-9D56-DE11F2D511C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A90140C2-96AD-4A93-9D56-DE11F2D511C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A90140C2-96AD-4A93-9D56-DE11F2D511C9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A90140C2-96AD-4A93-9D56-DE11F2D511C9} = {651A3C2D-DAEF-40F9-AD32-952162DC12D0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5627264F-1DAA-47BF-BAC7-A235E4C218FE}
