@@ -5,7 +5,7 @@
 		<DataCollectors>
 			<DataCollector friendlyName="XPlat Code Coverage">
 				<Configuration>
-					<Format>lcov</Format>
+					<Format>opencover</Format>
 					<Exclude></Exclude>
 					<SingleHit>false</SingleHit>
 					<UseSourceLink>true</UseSourceLink>
