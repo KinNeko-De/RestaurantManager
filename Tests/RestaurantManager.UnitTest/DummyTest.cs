@@ -9,7 +9,7 @@ public class DummyTest
     {
         var sut = new Dummy();
         var actual = sut.TestMe(true, true);
-        Assert.Equals(true, actual);
+        Assert.AreEqual(true, actual);
     }
 
 }
