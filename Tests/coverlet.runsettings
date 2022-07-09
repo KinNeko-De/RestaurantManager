@@ -9,7 +9,7 @@
 					<Exclude>[*Testing]*</Exclude>
 					<SingleHit>false</SingleHit>
 					<UseSourceLink>true</UseSourceLink>
-					<IncludeTestAssembly>true</IncludeTestAssembly>
+					<IncludeTestAssembly>false</IncludeTestAssembly>
 					<SkipAutoProps>true</SkipAutoProps>
 					<DeterministicReport>false</DeterministicReport>
 				</Configuration>
