@@ -13,6 +13,9 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestaurantManager.UnitTest", "Tests\RestaurantManager.UnitTest\RestaurantManager.UnitTest.csproj", "{A90140C2-96AD-4A93-9D56-DE11F2D511C9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{651A3C2D-DAEF-40F9-AD32-952162DC12D0}"
+	ProjectSection(SolutionItems) = preProject
+		Tests\coverlet.runsettings = Tests\coverlet.runsettings
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
