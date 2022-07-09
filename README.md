@@ -5,4 +5,4 @@ One day I woke up. I was totally in a panic because I have to release a new vers
 
 Unfortunately, I do not had such an app. So I create this one to sleep better in the future.
 
-Editing this README does not cause a pipeline to run.
+Editing this README does not cause a pipeline to run. This helps to save the clima.
