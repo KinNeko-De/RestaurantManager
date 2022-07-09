@@ -6,10 +6,10 @@
 			<DataCollector friendlyName="XPlat Code Coverage">
 				<Configuration>
 					<Format>lcov</Format>
-					<Exclude>[*Testing]*</Exclude>
+					<Exclude></Exclude>
 					<SingleHit>false</SingleHit>
 					<UseSourceLink>true</UseSourceLink>
-					<IncludeTestAssembly>false</IncludeTestAssembly>
+					<IncludeTestAssembly>true</IncludeTestAssembly>
 					<SkipAutoProps>true</SkipAutoProps>
 					<DeterministicReport>false</DeterministicReport>
 				</Configuration>
