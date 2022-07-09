@@ -9,7 +9,7 @@ on:
 
 env:
   MAJOR_MINOR_VERSION: 0.1
-  SEMANTIC_VERSION: 0.1.${{github.run_number}}
+  SEMANTIC_VERSION: env['MAJOR_MINOR_VERSION'].${{github.run_number}}
   
 concurrency: cd-${{ github.ref }}
 
