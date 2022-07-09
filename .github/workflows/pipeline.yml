@@ -2,9 +2,16 @@ name: .NET
 
 on:
   push:
-    branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
+    path-ignore:
+      - '**.md'
+      - 'docs/**'
+  pull_request
+
+env:
+  MAJORMINORVERSION: 0.1
+  SEMANTICVERSION: ${{ MAJORMINORVERSION}}.${{github.run_number}}
+  
+concurrency: cd-${{ github.ref }}
 
 jobs:
   build:
