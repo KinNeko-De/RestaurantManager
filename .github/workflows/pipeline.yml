@@ -1,5 +1,3 @@
-name: ci pipeline
-
 on:
   push:
     path-ignore:
@@ -9,9 +7,11 @@ on:
 
 env:
   MAJOR_MINOR_VERSION: 0.1
-  SEMANTIC_VERSION: env['MAJOR_MINOR_VERSION'].${{github.run_number}}
+  SEMANTIC_VERSION: ${{env['MAJOR_MINOR_VERSION']}}.${{github.run_number}}
   
 concurrency: cd-${{ github.ref }}
+
+name: ci pipeline
 
 jobs:
   build:
