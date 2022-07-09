@@ -6,7 +6,7 @@ on:
   pull_request:
 
 env:
-  MAJOR_MINOR_VERSION: 0.1
+  SEMANTIC_VERSION: 0.1.${{github.run_number}}
 
 concurrency: ci-${{ github.ref }}
 
@@ -15,8 +15,6 @@ name: ci-pipeline
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      SEMANTIC_VERSION: ${{env.MAJOR_MINOR_VERSION}}.${{github.run_number}}
     steps:
     - uses: actions/checkout@v3
     - name: Setup .NET
