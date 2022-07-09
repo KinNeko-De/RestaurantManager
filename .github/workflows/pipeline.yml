@@ -7,8 +7,10 @@ on:
 
 env:
   MAJOR_MINOR_VERSION: 0.1
+
+env:
   SEMANTIC_VERSION: ${{env.MAJOR_MINOR_VERSION}}.${{github.run_number}}
-  
+
 concurrency: ci-${{ github.ref }}
 
 name: ci-pipeline-${{ env.SEMANTIC_VERSION }}
