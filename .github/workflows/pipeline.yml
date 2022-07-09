@@ -1,7 +1,7 @@
 on:
   push:
     path-ignore:
-      - '**.md'
+      - '**/**.md'
       - 'docs/**'
   pull_request:
 
