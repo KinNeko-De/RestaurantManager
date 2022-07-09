@@ -5,7 +5,7 @@ on:
     path-ignore:
       - '**.md'
       - 'docs/**'
-  pull_request
+  pull_request:
 
 env:
   MAJORMINORVERSION: 0.1
