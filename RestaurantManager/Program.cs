@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.Server.Kestrel.Core;
 using Microsoft.Extensions.Configuration.Json;
+using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Serilog;
 using Serilog.Events;
 #pragma warning disable IDE0079 // Remove unnecessary suppression
@@ -71,8 +72,15 @@ public class Program
     private static void ConfigureServices(IServiceCollection services, ConfigurationManager configuration)
     {
         ConfigureDependencyInjection(services, configuration);
-        services.AddHealthChecks();
+        services.AddHealthChecks()
+            .AddCheck<Operations.HealthChecks.Diagnostics.HttpHealthCheck>(
+                "http_health_check",
+                HealthStatus.Unhealthy,
+                new[] { "ready" });
+
         services.AddControllers().AddControllersAsServices();
+
+        services.AddGrpc();
     }
 
     private static void ConfigureConfiguration(IConfigurationBuilder configuration)
@@ -105,6 +113,7 @@ public class Program
         {
             endpoints.MapHealthChecks("/health/live", new HealthCheckOptions() { Predicate = _ => false }); // runs no checks, just to test if application is live
             endpoints.MapHealthChecks("/health/ready", new HealthCheckOptions()); // run all health checks
+            endpoints.MapGrpcService<Operations.HealthChecks.Grpc.GrpcHealthCheck>();
             endpoints.MapControllers();
         });
     }
@@ -155,7 +164,9 @@ public class Program
     {
         webHost.ConfigureKestrel((context, serverOptions) =>
         {
-            serverOptions.ListenAnyIP(3110, listenOptions => { listenOptions.Protocols = HttpProtocols.Http2; });
+            serverOptions.ListenAnyIP(8080, listenOptions => { listenOptions.Protocols = HttpProtocols.Http1; });
+            serverOptions.ListenAnyIP(3118, listenOptions => { listenOptions.Protocols = HttpProtocols.Http2; });
+            // serverOptions.ListenAnyIP(7106, listenOptions => { listenOptions.Protocols = HttpProtocols.Http3; });
         });
     }
 
