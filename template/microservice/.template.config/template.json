@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Nils Diekmann",
+  "classifications": [ "Web" ],
+  "identity": "Template.Dotnet.Microservice",
+  "name": "Template for a dotnet microservice",
+  "shortName": "microservice",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "symbols": {
+    "dotnet-name": {
+      "type": "parameter",
+      "replaces": "RestaurantManager",
+      "isRequired": "true",
+      "fileRename": "RestaurantManager"
+    },
+    "enable-flyway": {
+      "type": "parameter",
+      "dataType": "bool",
+      "defaultValue": "false"
+    },
+    "flyway":{
+      "type": "derived",
+      "valueSource": "enable-flyway",
+      "valueTransform": "NoTransform"
+    },
+  }
+}
