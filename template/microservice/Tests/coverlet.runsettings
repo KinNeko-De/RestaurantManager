@@ -13,7 +13,6 @@
 					<SkipAutoProps>true</SkipAutoProps>
 					<DeterministicReport>false</DeterministicReport>
 				</Configuration>
-			</DataCollector>
-		</DataCollectors>
+			</DataCollector>	</DataCollectors>
 	</DataCollectionRunSettings>
 </RunSettings>
