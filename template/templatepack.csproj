@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <PackageType>Template</PackageType>
+    <PackageVersion>1.0.0</PackageVersion>
+    <PackageId>Template.Dotnet</PackageId>
+    <Title>Template.Dotnet</Title>
+    <Authors>Nils Diekmann</Authors>
+    <Description>Templates</Description>
+    <PackageTags>dotnet-new;templates</PackageTags>
+
+    <TargetFramework>netstandard2.1</TargetFramework>
+
+    <IncludeContentInPack>true</IncludeContentInPack>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <ContentTargetFolders>content</ContentTargetFolders>
+    <NoWarn>$(NoWarn);NU5128</NoWarn>
+    <NoDefaultExcludes>true</NoDefaultExcludes>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="**\*" Exclude="**\bin\**;**\obj\**;**\publish\**;**\.vs\**;**\.vscode\**;Template.Dotnet*.nupkg;buildAndInstallTemplates.cmd;templatepack.csproj" />
+    <Compile Remove="**\*" />
+  </ItemGroup>
+
+</Project>
