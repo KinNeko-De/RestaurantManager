@@ -1,14 +1,16 @@
 **Automation is necessary for lazy people**
 
-#Template
+# Template
 Project for all templates
 
-#Install templates
-On windows run ``` bat
+# Install templates
+On windows run
+``` bat
 buildAndInstallTemplates.cmd
-``` to install all templates.
+```
+to install all templates.
 
-#New project
+# New project
 The template must be used to create new projects
 
 ## Microservice
