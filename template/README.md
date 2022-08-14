@@ -5,7 +5,8 @@ Project for all templates
 
 # Install templates
 On windows run ``` bat 
-buildAndInstallTemplates.cmd ``` to install all templates.
+buildAndInstallTemplates.cmd 
+``` to install all templates.
 
 # New project
 The template must be used to create new projects
