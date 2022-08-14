@@ -1,4 +1,4 @@
-**Automation is necessary for lazy people
+**Automation is necessary for lazy people**
 
 #Template
 Project for all templates
